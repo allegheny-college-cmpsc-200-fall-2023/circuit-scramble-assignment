@@ -1,0 +1,48 @@
+- equality/program.S:
+  - description: equality/program.S uses AND bitwise logic instruction
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[and|AND](\s|\t)+R[0-7],(\s)?[R|r][0-7]'
+      count: 1
+      exact: false
+- equality/program.S:
+  - description: equality/program.S uses OR bitwise logic instruction
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: 'ORR(\s|\t)+[R|r][0-7],(\s)?[R|r][0-7]'
+      count: 1
+      exact: false
+- equality/program.S:
+  - description: equality/program.S uses NOT bitwise logic instruction
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[not|NOT](\s|\t)+[R|r][0-7]'
+      count: 2
+      exact: false
+- equality/program.S:
+  - description: equality/program.S uses a comparison instruction
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[cmp|CMP](\s|\t)+[R|r][0-7],(\s)+[R|r][0-7]'
+      count: 1
+      exact: false
+- equality/program.S:
+  - description: equality/program.S uses a branching instruction
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[beq|blt|bne|bgt|BEQ|BLT|BNE|BGT](\s|\t)+[a-zA-Z0-9_:]+'
+      count: 1
+      exact: false
+- docs/report.md:
+  - description: docs/report.md answers all questions
+    category: Documentation
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
