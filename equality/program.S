@@ -36,4 +36,4 @@ finish:
     format:     .asciz  "OUTPUT: %d\n"
     elements:   .byte   0, 0, 0, 1, 1, 0, 1, 1
     end:
-    .set        size, end - signals
+    .set        size, end - elements
