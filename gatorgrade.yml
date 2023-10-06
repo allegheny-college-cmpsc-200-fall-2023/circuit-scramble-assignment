@@ -31,13 +31,97 @@
       count: 1
       exact: false
 - equality/program.S:
-  - description: equality/program.S uses a branching instruction
+  - description: equality/program.S uses a branching instruction to choose correct path(s)
     category: ARMv6 Assembly
     check: MatchFileRegex
     options:
       regex: '[beq|blt|bne|bgt|BEQ|BLT|BNE|BGT](\s|\t)+[a-zA-Z0-9_:]+'
       count: 1
       exact: false
+- majority/program.S:
+  - description: majority/program.S uses an LDRB instruction with an offset
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[ldrb|LDRB](\s|\t)+[r|R][0-7],(\s)+\[[r|R][0-7],(\s)+[r|R|#][0-7]]'
+      count: 1
+      exact: false
+- majority/program.S:
+  - description: majority/program.S uses a branching instruction
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[beq|blt|bne|bgt|BEQ|BLT|BNE|BGT](\s|\t)+[a-zA-Z0-9_:]+'
+      count: 1
+      exact: false
+- majority/program.S:
+  - description: majority/program.S uses AND bitwise logic instruction
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[and|AND](\s|\t)+[r|R][0-7],(\s)+[r|R][0-7]'
+      count: 1
+      exact: false
+- majority/program.S:
+  - description: majority/program.S uses an OR bitwide logic instruction
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[or|OR](\s|\t)+[r|R][0-7],(\s)+[r|R][0-7]'
+      count: 1
+      exact: false
+- majority/program.S:
+  - description: majority/program.S loads the format string to print output
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[ldr|LDR](\s|\t)+R0,(\s)+=format'
+      count: 1
+      exact: false
+- majority/program.S:
+  - description: majority/program.S loads the true string to print majority outcome
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[ldr|LDR](\s|\t)+R1,(\s)+=true'
+      count: 1
+      exact: false
+- majority/program.S:
+  - description: majority/program.S loads the false string to print no majority outcome
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[ldr|LDR](\s|\t)+R1,(\s)+=false'
+      count: 1
+      exact: false
+- majority/program.S:
+  - description: majority/program.S uses the printf instruction
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[bl|BL](\s|\t)+printf'
+      count: 1
+      exact: false
+- majority/program.S:
+  - description: majority/program.S uses a comparison instruction
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[cmp|CMP](\s|\t)+[R|r][0-7],(\s)+[R|r][0-7]'
+      count: 1
+      exact: false
+- majority/program.S:
+  - description: majority/program.S uses a branching instruction to choose correct path(s)
+    category: ARMv6 Assembly
+    check: MatchFileRegex
+    options:
+      regex: '[beq|blt|bne|bgt|BEQ|BLT|BNE|BGT](\s|\t)+[a-zA-Z0-9_:]+'
+      count: 1
+      exact: false
+- majority/majority.png:
+  - description: majority circuit diagram appears as a PNG (majority.png) in majority directory
+    category: Digital Circuits
+    check: ConfirmFileExists
 - docs/report.md:
   - description: docs/report.md answers all questions
     category: Documentation

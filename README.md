@@ -29,7 +29,12 @@ This circuit should report a `1` whenever the pairs match.
 
 ### Lab: Majority circuit
 
-Complete this work in [majority/program.S](majority/program.S).
+Complete this work in the following files:
+
+* Circuit diagram: [majority/majority.cddx](majority/majority.cddx)
+  * You should upload this file to [https://www.circuit-diagram.org/](https://www.circuit-diagram.org/) to complete; overwrite when done
+  * Also, you should export a `PNG` as majority.png; save to `majority` folder
+* Code: [majority/program.S](majority/program.S)
 
 The Mining Council, as you might expect, is run by robots. (They're really nice, tho.) However,
 they make all of their decisions via a process which captures the majority of votes either _against_ (`0`) or _for_ (`1`) a proposition. They've largely been doing this via punch cards.
@@ -60,7 +65,7 @@ In order to recieve credit for the Hack, you must fill out the [hack.md](docs/ha
 
 #### `equality`
 
-We're currently testing numbers in _pairs_. What happens if you try to evalue numbers in triple? Replace the `signals` declaration in 
+We're currently testing numbers in _pairs_. What happens if you try to evaluate numbers in triple? Replace the `signals` declaration in 
 `.data` with the following:
 
 ```assembly
